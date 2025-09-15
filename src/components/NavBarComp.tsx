@@ -4,12 +4,12 @@ import { FiMessageSquare } from "react-icons/fi";
 import { FaRegBell } from "react-icons/fa";
 import { useSideBar } from "../providers/sideBarProvider";
 
-function NavBar() {
+function NavBarComp({status, open, close} : {status : boolean, open : string, close : string}) {
 
-    const {setIsOpen, isOpen} = useSideBar();
+    const {setIsOpen} = useSideBar();
 
     return (
-        <div className={`${isOpen ? "medium-screen-open-navbar" : "medium-screen-close-navbar" } hidden md:block relative`}>
+        <div className={`${status ? open : close } md:hidden relative`}>
             <div className="p-3 flex-between">
                 <div className="gap-2 flex-items">
                     <FaBars 
@@ -27,4 +27,4 @@ function NavBar() {
     )
 }
 
-export default NavBar
+export default NavBarComp

@@ -9,7 +9,7 @@ function MobileNavBar() {
     const {setIsOpen, isOpen} = useSideBar();
 
     return (
-        <div className={`${isOpen ? "w-[100%] left-0" : "w-[55%] left-[45%]" } md:hidden relative`}>
+        <div className={`${isOpen ? "small-screen-open-navbar" : "small-screen-close-navbar" } md:hidden relative`}>
             <div className="p-3 flex-between">
                 <div className="gap-2 flex-items">
                     <FaBars 

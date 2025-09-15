@@ -10,7 +10,7 @@ const SideBar = () => {
     const {isOpen} = useSideBar();
 
     return (
-        <nav className={`fixed top-0 ${isOpen ? "left-0" : "-left-[20%]"} hidden md:block left-0 pb-6 overflow-y-auto w-[20%] h-screen bg-white px-2 pl-3`}>
+        <nav className={`fixed top-0 ${isOpen ? "medium-screen-open-sidebar" : "medium-screen-close-sidebar"} hidden md:block pb-6 overflow-y-auto medium-sidebar-width h-screen bg-white px-2 pl-3`}>
             <div className="gap-2 pt-3 mb-3 text-sm flex-items">
                 <img src="../data/avatar.jpg" alt="" />
                 <p className="font-semibold">Shoppy</p>

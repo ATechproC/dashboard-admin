@@ -1,14 +1,11 @@
 import { FiShoppingBag } from 'react-icons/fi';
-import { useSideBar } from '../providers/sideBarProvider';
 import { links } from '../constants';
 import { NavLink } from 'react-router-dom';
 
-function MobileSideBar() {
-
-    const {isOpen} = useSideBar();
+function SideBarComp({status, open, close} : {status : boolean, open : string, close : string}) {
 
     return (
-        <nav className={`fixed top-0 ${isOpen ? "small-screen-open-sidebar" : "small-screen-close-sidebar"} md:hidden pb-6 overflow-y-auto small-sidebar-width h-screen bg-white px-2 pl-3`}>
+        <nav className={`fixed top-0 ${status ? open : close} md:hidden pb-6 overflow-y-auto small-sidebar-width h-screen bg-white px-2 pl-3`}>
                     <div className="gap-2 pt-3 mb-3 text-sm flex-items">
                         <img src="../data/avatar.jpg" alt="" />
                         <p className="font-semibold">Shoppy</p>
@@ -40,4 +37,4 @@ function MobileSideBar() {
     )
 }
 
-export default MobileSideBar
+export default SideBarComp
