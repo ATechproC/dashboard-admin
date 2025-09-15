@@ -8,7 +8,7 @@ function MobileSideBar() {
     const {isOpen} = useSideBar();
 
     return (
-        <nav className={`fixed top-0 ${isOpen ? "small-screen-open-sidebar" : "small-screen-close-sidebar"} md:hidden pb-6 overflow-y-auto small-sidebar-width h-screen bg-white px-2 pl-3`}>
+        <nav className={`fixed top-0 ${isOpen ? "small-screen-open-sidebar" : "small-screen-close-sidebar"} md:hidden pb-6 overflow-y-auto small-screen-sidebar-width h-screen bg-white px-2 pl-3`}>
                     <div className="gap-2 pt-3 mb-3 text-sm flex-items">
                         <img src="../data/avatar.jpg" alt="" />
                         <p className="font-semibold">Shoppy</p>

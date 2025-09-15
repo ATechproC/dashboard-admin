@@ -38,8 +38,6 @@ body {
         @apply w-[20%];
     }
 
-
-
     /* Sidebar settings */
     .small-screen-open-sidebar {
         @apply -left-[45%];
