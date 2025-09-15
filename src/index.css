@@ -1,11 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
-body{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebe7e7;
     font-family: "Open Sans", sans-serif;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+    
+    .flex-between {
+        @apply flex items-center justify-between
+    }
+
+    .flex-items {
+        @apply flex items-center;
+    }
+
+    .flex-center {
+        @apply flex items-center justify-between
+    }
+    
+    .medium-width {
+        @apply w-[20%]
+    }
+
+    .small-width {
+        @apply w-[45%]
+    }
+
+    /* sideBar settings  */
+
+    .small-screen-open {
+        @apply -left-[45%];
+    }
+
+    .small-screen-close {
+        @apply left-0;
+    }
+
+    .medium-screen-open {
+        @apply left-0
+    }
+
+    .-screen-close {
+        @apply -left-[20%]
+    }
+
+    /* NavBar settings */ 
+
+    .small-screen-open {
+        @apply w-[100%] left-0;
+    }
+
+    .small-screen-close {
+        @apply w-[55%] left-[45%];
+    }
+
+    .medium-screen-open {
+        @apply w-[80%] left-[20%];
+    }
+
+    .medium-screen-close {
+        @apply w-[100%] left-0;
+    }
+}

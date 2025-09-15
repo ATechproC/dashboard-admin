@@ -7,6 +7,11 @@ module.exports = {
       body: ['Open Sans', 'sans-serif'],
     },
     extend: {
+      color : {
+        light : {
+          1 : "rgb(3, 201, 215)"
+        }
+      },
       fontSize: {
         14: '14px',
       },
