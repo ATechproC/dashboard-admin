@@ -1,6 +1,5 @@
 // import React from 'react';
 // import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
 // import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 // import { BiColorFill } from 'react-icons/bi';
 // import { IoMdContacts } from 'react-icons/io';
@@ -541,7 +540,7 @@ export const cartData = [
   },
 ];
 
-export const chatData = [
+export const messagesData = [
   {
     image: avatar2,
     message: 'Roman Joined the Team!',
@@ -568,6 +567,32 @@ export const chatData = [
     message: 'Jolly completed tasks',
     desc: 'Assign her new tasks',
     time: '1:12 AM',
+  },
+];
+
+export const notificationData = [
+  {
+    image: avatar2,
+    message: 'Roman Joined the Team!',
+    desc: 'Congratulate him',
+  },
+  {
+    image:
+      avatar3,
+    message: 'New message received',
+    desc: 'Salma sent you message',
+  },
+  {
+    image:
+      avatar4,
+    message: 'New Payment received',
+    desc: 'Check your earnings',
+  },
+  {
+    image:
+      avatar,
+    message: 'Jolly completed tasks',
+    desc: 'Assign her new tasks',
   },
 ];
 
