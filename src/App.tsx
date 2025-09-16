@@ -21,6 +21,8 @@ import Customers from "./components/Customers";
 import Calendar from "./components/Calendar";
 import ColorMapping from "./components/ColorMapping";
 import { SideBarProvider } from "./providers/sideBarProvider";
+import PopUp from "./components/PopUp";
+import PopUpProvider from "./providers/PopUpProvider";
 
 function App() {
 
@@ -50,7 +52,9 @@ function App() {
 
   return <div>
     <SideBarProvider>
-      <RouterProvider router={router} />
+      <PopUpProvider>
+        <RouterProvider router={router} />
+      </PopUpProvider>
     </SideBarProvider>
   </div>
 }

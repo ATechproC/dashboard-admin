@@ -8,8 +8,8 @@ module.exports = {
     },
     extend: {
       color : {
-        light : {
-          1 : "rgb(3, 201, 215)"
+        favorite : {
+          1 : "#03c9d7"
         }
       },
       fontSize: {

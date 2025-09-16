@@ -1,16 +1,22 @@
 import { NavLink } from "react-router-dom";
 import { links } from "../constants";
 
-import { FiShoppingBag} from 'react-icons/fi';
+import { FiShoppingBag } from 'react-icons/fi';
 import { useSideBar } from "../providers/sideBarProvider";
-
+import { FaTimes } from "react-icons/fa";
 
 const SideBar = () => {
 
-    const {isOpen} = useSideBar();
+    const { isOpen, setIsOpen } = useSideBar();
 
     return (
-        <nav className={`fixed top-0 ${isOpen ? "medium-screen-open-sidebar" : "medium-screen-close-sidebar"} hidden md:block pb-6 overflow-y-auto medium-screen-sidebar-width h-screen bg-white px-2 pl-3`}>
+        <nav className={`fixed z-20 top-0 ${isOpen ? "medium-screen-open-sidebar" : "medium-screen-close-sidebar"} hidden md:block pb-6 overflow-y-auto medium-screen-sidebar-width h-screen bg-white px-2 pl-3`}>
+            <FaTimes
+                className="absolute cursor-pointer top-3 right-2"
+                size={15}
+                color="rgb(3, 201, 215)"
+                onClick={() => setIsOpen(false)}
+            />
             <div className="gap-2 pt-3 mb-3 text-sm flex-items">
                 <img src="../data/avatar.jpg" alt="" />
                 <p className="font-semibold">Shoppy</p>
