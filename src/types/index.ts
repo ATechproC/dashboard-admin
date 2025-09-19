@@ -53,6 +53,12 @@ export interface HeaderProps {
 export interface SideBarCompProps { styles: string, timesStatus: boolean }
 
 export interface ChartsHeaderProps {
-    category : string;
-    title : string;
+    category: string;
+    title: string;
+}
+
+export interface ColorThemeProps {
+    color: string;
+    id: number;
+    check: boolean;
 }

@@ -4,8 +4,10 @@ import { FaCheck } from "react-icons/fa6";
 import { useEffect, useReducer } from "react";
 import { themeColorsGr } from "../constants";
 import reducer from "../reducers";
+import type { ColorThemeProps } from "../types";
 
 const ThemeSettings = () => {
+
     const { setThemeColors } = useTheme();
 
     const [themeColorsArr, dispatch] = useReducer(reducer, themeColorsGr)
@@ -23,31 +25,18 @@ const ThemeSettings = () => {
 
 
     const handleThemeColor = (id: number) => {
-        // const newArr = [...themeColorsArr];
-        // for (let i = 0; i < newArr.length; i++) {
-        //     let newObject;
-        //     if (i === id - 1) {
-        //         newObject = { ...newArr[i], isChecked: !newArr[i].isChecked };
-        //     } else {
-        //         newObject = { ...newArr[i], isChecked: false };
-        //     }
-        //     newArr[i] = newObject;
-        // }
-        // setThemeColorsArr(newArr);
-        dispatch({type : "handled", payload : {
-            id,
-        }})
+        dispatch({
+            type: "handled", payload: {
+                id,
+            }
+        })
     };
 
     function ColorTheme({
         color,
         id,
         check,
-    }: {
-        color: string;
-        id: number;
-        check: boolean;
-    }) {
+    }: ColorThemeProps) {
         return (
             <span
                 onClick={() => handleThemeColor(id)}
@@ -70,10 +59,12 @@ const ThemeSettings = () => {
     useEffect(() => {
         if (isDark) {
             document.documentElement.classList.add("dark");
+            localStorage.theme = "dark"
             document.body.style.backgroundColor = "#20232A";
         } else {
             document.documentElement.classList.remove("dark");
             document.body.style.backgroundColor = "#ebe7e7";
+            if(localStorage.theme) localStorage.theme = "light"
         }
     }, [isDark]);
 
