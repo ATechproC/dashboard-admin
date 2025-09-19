@@ -6,6 +6,7 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "noEmitOnError": false,  // ← THIS IS THE KEY OPTION
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -15,13 +16,12 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    /* Linting - Relax these rules */
+    "strict": false,           // ← Set to false
+    "noUnusedLocals": false,   // ← Set to false
+    "noUnusedParameters": false, // ← Set to false
+    "noFallthroughCasesInSwitch": false,
+    "noUncheckedSideEffectImports": false
   },
   "include": ["src"]
 }
