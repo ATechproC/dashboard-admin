@@ -1,4 +1,4 @@
-import { useSideBar } from "../providers/sideBarProvider";
+import { useSideBar } from "../../providers/sideBarProvider";
 import NavBarComp from "./NavBarComp";
 
 function MobileNavBar() {
@@ -9,7 +9,7 @@ function MobileNavBar() {
             styles={`${isOpen ? 
                 "small-screen-open-navbar" : 
                 "small-screen-close-navbar"
-                } md:hidden relative`
+                } md:hidden fixed z-20 backdrop-blur-md `
             }
         />
     );

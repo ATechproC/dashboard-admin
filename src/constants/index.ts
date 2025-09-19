@@ -1,16 +1,3 @@
-// import React from 'react';
-// import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-// import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
-// import { BiColorFill } from 'react-icons/bi';
-// import { IoMdContacts } from 'react-icons/io';
-// import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-// import { MdOutlineSupervisorAccount } from 'react-icons/md';
-// import { HiOutlineRefresh } from 'react-icons/hi';
-// import { TiTick } from 'react-icons/ti';
-// import { GiLouvrePyramid } from 'react-icons/gi';
-// import { GrLocation } from 'react-icons/gr';
-
-// export const Icons =  [ FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart ];
 
 import avatar from './data/avatar.jpg';
 import avatar2 from './data/avatar2.jpg';
@@ -39,6 +26,15 @@ export const assets = {
   product7,
   product8
 }
+
+export const themeColorsGr = [
+  { id: 1, color: "#1a97f5", isChecked: false },
+  { id: 2, color: "#03c9d7", isChecked: false },
+  { id: 3, color: "#7352ff", isChecked: false },
+  { id: 4, color: "#ff5c8e", isChecked: false },
+  { id: 5, color: "#1e4db7", isChecked: false },
+  { id: 6, color: "#fb9678", isChecked: false },
+];
 
 export const kanbanGrid = [
   {
@@ -433,7 +429,6 @@ export const links = [
     links: [
       {
         name: 'ecommerce',
-        // icon: FiShoppingBag ,
       },
     ],
   },
@@ -443,15 +438,12 @@ export const links = [
     links: [
       {
         name: 'orders',
-        // icon: <AiOutlineShoppingCart />,
       },
       {
         name: 'employees',
-        // icon: <IoMdContacts />,
       },
       {
         name: 'customers',
-        // icon: <RiContactsLine />,
       },
     ],
   },
@@ -460,19 +452,15 @@ export const links = [
     links: [
       {
         name: 'calendar',
-        // icon: <AiOutlineCalendar />,
       },
       {
         name: 'kanban',
-        // icon: <BsKanban />,
       },
       {
         name: 'editor',
-        // icon: <FiEdit />,
       },
       {
         name: 'color-picker',
-        // icon: <BiColorFill />,
       },
     ],
   },
@@ -481,36 +469,25 @@ export const links = [
     links: [
       {
         name: 'line',
-        // icon: <AiOutlineStock />,
       },
       {
         name: 'area',
-        // icon: <AiOutlineAreaChart />,
       },
 
       {
         name: 'bar',
-        // icon: <AiOutlineBarChart />,
       },
       {
         name: 'pie',
-        // icon: <FiPieChart />,
       },
       {
         name: 'financial',
-        // icon: <RiStockLine />,
       },
       {
         name: 'color-mapping',
-        // icon: <BsBarChart />,
       },
       {
         name: 'pyramid',
-        // icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        // icon: <AiOutlineBarChart />,
       },
     ],
   },
@@ -853,55 +830,55 @@ export const userProfileData = [
   },
 ];
 
-export const ordersGrid = [
-  {
-    headerText: 'Image',
-    // template: gridOrderImage,
-    textAlign: 'Center',
-    width: '120',
-  },
-  {
-    field: 'OrderItems',
-    headerText: 'Item',
-    width: '150',
-    editType: 'dropdownedit',
-    textAlign: 'Center',
-  },
-  {
-    field: 'CustomerName',
-    headerText: 'Customer Name',
-    width: '150',
-    textAlign: 'Center',
-  },
-  {
-    field: 'TotalAmount',
-    headerText: 'Total Amount',
-    format: 'C2',
-    textAlign: 'Center',
-    editType: 'numericedit',
-    width: '150',
-  },
-  {
-    headerText: 'Status',
-    // template: gridOrderStatus,
-    field: 'OrderItems',
-    textAlign: 'Center',
-    width: '120',
-  },
-  {
-    field: 'OrderID',
-    headerText: 'Order ID',
-    width: '120',
-    textAlign: 'Center',
-  },
+// export const ordersGrid = [
+//   {
+//     headerText: 'Image',
+//     // template: gridOrderImage,
+//     textAlign: 'Center',
+//     width: '120',
+//   },
+//   {
+//     field: 'OrderItems',
+//     headerText: 'Item',
+//     width: '150',
+//     editType: 'dropdownedit',
+//     textAlign: 'Center',
+//   },
+//   {
+//     field: 'CustomerName',
+//     headerText: 'Customer Name',
+//     width: '150',
+//     textAlign: 'Center',
+//   },
+//   {
+//     field: 'TotalAmount',
+//     headerText: 'Total Amount',
+//     format: 'C2',
+//     textAlign: 'Center',
+//     editType: 'numericedit',
+//     width: '150',
+//   },
+//   {
+//     headerText: 'Status',
+//     // template: gridOrderStatus,
+//     field: 'OrderItems',
+//     textAlign: 'Center',
+//     width: '120',
+//   },
+//   {
+//     field: 'OrderID',
+//     headerText: 'Order ID',
+//     width: '120',
+//     textAlign: 'Center',
+//   },
 
-  {
-    field: 'Location',
-    headerText: 'Location',
-    width: '150',
-    textAlign: 'Center',
-  },
-];
+//   {
+//     field: 'Location',
+//     headerText: 'Location',
+//     width: '150',
+//     textAlign: 'Center',
+//   },
+// ];
 
 export const customersData = [
   {
@@ -3118,7 +3095,10 @@ export const pieChartData = [
   { x: 'Insurance', y: 16, text: '16%' },
 ];
 
-export const contextMenuItems = [
+
+type ContextMenuItem = "AutoFitAll" | "AutoFit" | "Group" | "Ungroup" | "Edit" | "Delete" | "Save" | "Cancel" | "Copy" | "PdfExport" | "ExcelExport" | "CsvExport" | "SortAscending" | "SortDescending" | "FirstPage" | "PrevPage" | "LastPage" | "NextPage"
+
+export const contextMenuItems: ContextMenuItem[] = [
   'AutoFit',
   'AutoFitAll',
   'SortAscending',
@@ -3136,6 +3116,7 @@ export const contextMenuItems = [
   'LastPage',
   'NextPage',
 ];
+
 
 export const ecomPieChartData = [
   { x: '2018', y: 18, text: '35%' },
@@ -3199,6 +3180,16 @@ export const stackedPrimaryXAxis = {
   labelIntersectAction: 'Rotate45',
   valueType: 'Category',
 };
+
+export const primaryXAxis = {
+  valueType: 'Category', // or 'DateTime' if using dates
+  labelRotation: 45,     // rotate labels to 45 degrees
+  labelIntersectAction: 'Rotate45', // or 'Wrap' for multiple lines
+  majorGridLines: { width: 0 },
+  minorGridLines: { width: 0 },
+  labelStyle: { color: 'gray' },
+}
+
 
 export const stackedPrimaryYAxis = {
   lineStyle: { width: 0 },

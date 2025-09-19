@@ -1,34 +1,32 @@
-import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
+import { BsKanban } from 'react-icons/bs';
 import { BiColorFill } from 'react-icons/bi';
-import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
-import { HiOutlineRefresh } from 'react-icons/hi';
-import { TiTick } from 'react-icons/ti';
 import { GiLouvrePyramid } from 'react-icons/gi';
-import { GrLocation } from 'react-icons/gr';
 import { FiEdit, FiPieChart, FiShoppingBag } from 'react-icons/fi';
+import { useTheme } from '../providers/ThemeProvider';
 
 const GetIcons = ({type} : {type : string}) => {
+
+    const {isDark} = useTheme();
+
     switch(type) {
-        case "ecommerce" : return <FiShoppingBag />
-        case "orders" : return <AiOutlineShoppingCart />
-        case "employees" : return <AiOutlineShoppingCart />
-        case "customers" : return < RiContactsLine/>
-        case "calendar" : return < AiOutlineCalendar/>
-        case "kanban" : return < BsKanban/>
-        case "editor" : return < FiEdit/>
-        case "color-picker" : return < BiColorFill/>
-        case "line" : return < AiOutlineStock/>
-        case "area" : return < AiOutlineAreaChart/>
-        case "bar" : return < AiOutlineBarChart/>
-        case "pie" : return < FiPieChart/>
-        case "financial" : return < RiStockLine/>
-        case "pyramid" : return < GiLouvrePyramid/>
-        case "stacked" : return < AiOutlineBarChart/>
-        default : return < AiOutlineStock/>
+        case "ecommerce" : return <FiShoppingBag color={isDark ? "white" : ""} />
+        case "orders" : return <AiOutlineShoppingCart color={isDark ? "white" : ""} />
+        case "employees" : return <AiOutlineShoppingCart color={isDark ? "white" : ""} />
+        case "customers" : return < RiContactsLine color={isDark ? "white" : ""}/>
+        case "calendar" : return < AiOutlineCalendar color={isDark ? "white" : ""}/>
+        case "kanban" : return < BsKanban color={isDark ? "white" : ""}/>
+        case "editor" : return < FiEdit color={isDark ? "white" : ""}/>
+        case "color-picker" : return < BiColorFill color={isDark ? "white" : ""}/>
+        case "line" : return < AiOutlineStock color={isDark ? "white" : ""}/>
+        case "area" : return < AiOutlineAreaChart color={isDark ? "white" : ""}/>
+        case "bar" : return < AiOutlineBarChart color={isDark ? "white" : ""}/>
+        case "pie" : return < FiPieChart color={isDark ? "white" : ""}/>
+        case "financial" : return < RiStockLine color={isDark ? "white" : ""}/>
+        case "pyramid" : return < GiLouvrePyramid color={isDark ? "white" : ""}/>
+        case "stacked" : return < AiOutlineBarChart color={isDark ? "white" : ""}/>
+        default : return < AiOutlineStock color={isDark ? "white" : ""}/>
     }
 }
 

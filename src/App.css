@@ -64,3 +64,9 @@ a.active {
   background-color : rgb(3, 201, 215);
   color: #fff;
 }
+
+/* handle syncfusion-license-error pop-ups*/
+
+body > *:not(#root, script) {
+  display: none
+}

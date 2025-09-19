@@ -11,7 +11,7 @@
 // import { GiLouvrePyramid } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
 
-export const GridOrderImage = (props : {ProductImage : string}) => {
+export const gridOrderImage = (props : {ProductImage : string}) => {
     return (
         <div>
             <img
@@ -23,7 +23,7 @@ export const GridOrderImage = (props : {ProductImage : string}) => {
     )
 };
 
-export const GridOrderStatus = (props : {StatusBg : string, Status : string}) => {
+export const gridOrderStatus = (props : {StatusBg : string, Status : string}) => {
     return <button
         type="button"
         style={{ background: props.StatusBg }}
@@ -33,7 +33,7 @@ export const GridOrderStatus = (props : {StatusBg : string, Status : string}) =>
     </button>
 }
 
-const GridEmployeeProfile = (props : {EmployeeImage : string, Name: string}) => {
+export const gridEmployeeProfile = (props : {EmployeeImage : string, Name: string}) => {
     return <div className="flex items-center gap-2">
         <img
             className="w-10 h-10 rounded-full"
@@ -44,7 +44,7 @@ const GridEmployeeProfile = (props : {EmployeeImage : string, Name: string}) => 
     </div>
 };
 
-const GridEmployeeCountry = (props : {Country : string}) => {
+export const gridEmployeeCountry = (props : {Country : string}) => {
     return <div className="flex items-center justify-center gap-2">
         <GrLocation />
         <span>{props.Country}</span>

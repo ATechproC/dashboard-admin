@@ -1,4 +1,4 @@
-import { useSideBar } from "../providers/sideBarProvider";
+import { useSideBar } from "../../providers/sideBarProvider";
 import SideBarComp from "./SideBarComp";
 
 function MobileSideBar() {

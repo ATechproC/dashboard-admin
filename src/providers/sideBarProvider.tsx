@@ -1,9 +1,5 @@
 import { createContext, useContext, useState} from "react";
-
-interface SideBarContextProps {
-  isOpen : boolean;
-  setIsOpen : React.Dispatch<React.SetStateAction<boolean>>
-}
+import type { SideBarContextProps } from "../types";
 
 const SideBarContext = createContext({} as SideBarContextProps);
 

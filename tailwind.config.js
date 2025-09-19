@@ -7,9 +7,16 @@ module.exports = {
       body: ['Open Sans', 'sans-serif'],
     },
     extend: {
-      color : {
+      colors : {
         favorite : {
-          1 : "#03c9d7"
+          1 : "#03c9d7",
+          2 : "#4B5563"
+        },
+        dark : {
+          1 : "#20232A",
+          2 : "#33373E",
+          "bg-main" : "#ebe7e7",
+          "bg-dark-main" : "#20232A"
         }
       },
       fontSize: {

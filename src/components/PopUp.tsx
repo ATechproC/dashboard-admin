@@ -3,9 +3,8 @@ import { assets, messagesData, notificationData } from "../constants";
 import { usePopUp } from "../providers/PopUpProvider"
 import PopUpComp from "./PopUpComp";
 
-
 const PopUp = () => {
-
+    
     const { messageStatus, notificationStatus, profileStatus, setMessageStatus, setNotificationStatus, setProfileStatus } = usePopUp();
 
     return <>
@@ -43,7 +42,7 @@ const PopUp = () => {
                     <img src={assets.avatar} alt="" className="w-full h-full object-content" />
                 </div>
                 <div>
-                    <p className="font-semibold text-[18px]">Anass Choraichi</p>
+                    <p className="font-semibold text-[18px] dark:text-white">Anass Choraichi</p>
                     <div className="text-[14px] ml-3 text-gray-400">
                         <p>Administrator</p>
                         <p>info@shop.com</p>

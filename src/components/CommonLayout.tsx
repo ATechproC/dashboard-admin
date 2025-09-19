@@ -1,8 +1,9 @@
-import MobileNavBar from './MobileNavBar'
-import MobileSideBar from './MobileSideBar'
-import NavBar from './NavBar'
-import SideBar from './SideBar'
+import MobileNavBar from './NavBar/MobileNavBar'
+import MobileSideBar from './SideBar/MobileSideBar'
+import NavBar from './NavBar/NavBar'
+import Settings from './Settings'
 import { Outlet } from 'react-router-dom'
+import SideBar from './SideBar/SideBar'
 
 const CommonLayout = () => {
     return (
@@ -11,7 +12,8 @@ const CommonLayout = () => {
             <NavBar />
             <MobileSideBar />
             <MobileNavBar />
-            <div className='absolute left-1/2 top-1/2'>
+            <Settings />
+            <div className='w-screen'>
                 <Outlet />
             </div>
         </div>
